@@ -8,8 +8,11 @@ var hero = {
   weapon: { type: "Melee", damage: 2}
 };
 
-var assaultRifle = {type: "Ranged", damage: 5};
-var enemy = {health: 100, weapon: {type: "Melee", damage: 10}};
+var assaultRifle = {type: "AR", damage: 5};
+var machete = {type: "Melee", damage: 4};
+var magnum = {type: "Pistol", damage: 10};
+var shotgun = {type: "Shotgun", damage: 7};
+var enemy = {health: 10, weapon: {type: "Melee", damage: 1}};
 var getIndex = function(){
   var a = window.prompt("Index: ");
   return a;

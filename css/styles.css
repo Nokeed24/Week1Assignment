@@ -38,7 +38,7 @@ footer
 .iconbox
 {
   height: 100%;
-  width: 15%;
+  /*width: 15%;*/
   display: inline;
   position: relative;
 }
