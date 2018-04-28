@@ -9,20 +9,29 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-      <div class="board col span-1-of-1">
+      <div class="row board">
         <div class="col span-1-of-3 iconbox">
-          <img onclick="rest(hero)" class="restimage" src="images/bed.jpg" alt="bed" height="50" width="50">
-          <img class="weaponimage" src="images/assaultrifle.jpeg" alt="rifle" height="50" width="50">
-          <img class="backpackimage" src="images/backpack.jpeg" alt="rifle" height="50" width="50">
+          <img onclick="rest(hero);" class="restimage" src="images/bed.jpg" alt="bed" height="50" width="50">
+          <img onclick="pickUpItem(hero, assaultRifle);" class="weaponimage" src="images/assaultrifle.jpeg" alt="rifle" height="50" width="50">
+          <img onclick="equipWeapon(hero, getIndex());" class="backpackimage" src="images/backpack.jpeg" alt="rifle" height="50" width="50">
         </div>
         <div class="col span-1-of-3 herobox">
           <img class="heroimage" src="images/hero.jpg" alt="bed" height="170" width="170">
+          <ul class="stats">
+            <li>Name: <span id="name">Unknown</span></li>
+            <li>Health: <span id="health">0</span></li>
+            <li>Weapon type: <span id="weaponType">Unknown</span></li>
+            <li>Weapon Damage: <span id="weaponDamage">0</span></li>
+            <a href="#" id="clean-up">Clean up</a>
+            <a href="#" id="save">Save your list</a>
+          </ul>
         </div>
         <div class="col span-1-of-3 creaturebox">
-          <img class="zombieimage" src="images/zombie.jpg" alt="bed" height="170" width="170">
+          <img onclick="doBattle(hero, enemy);" class="zombieimage" src="images/zombie.jpg" alt="bed" height="170" width="170">
         </div>
-     </div>
+      </div>
      <footer>
+       
      </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="your_javascript_here.js"></script>

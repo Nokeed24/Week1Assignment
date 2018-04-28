@@ -1,29 +1,37 @@
 // Variables
 
 var hero = {
-  name: "Nick",
+  name: "Unknown",
   heroic: true,
   inventory: [],
-  health: 100,
-  weapon: { type: "Melee", damage: 100}
+  health: 10,
+  weapon: { type: "Melee", damage: 2}
 };
+
+var assaultRifle = {type: "Ranged", damage: 5};
+var enemy = {health: 100, weapon: {type: "Melee", damage: 10}};
+var getIndex = function(){
+  var a = window.prompt("Index: ");
+  return a;
+}
 
 // Game logic
 function rest(creature) {
   creature.health = 10;
   console.log("Healed! rest is working");
+  updateStats();
   return creature;
 }
 
 function pickUpItem(creature, item) {
   creature.inventory.push(item);
   console.log("pickUpItem Called");
+  updateStats();
   return creature;
 }
 
 function dealDamage(attacker, defender){
   defender.health -= attacker.weapon.damage;
-  console.log("dealDamage Called");
   return defender;
 }
 
@@ -31,6 +39,7 @@ function equipWeapon(creature, index){
   creature.weapon = creature.inventory[index];
   creature.inventory.splice(index, 1);
   console.log("equipWeapon Called");
+  updateStats();
   return creature;
 }
 
@@ -48,6 +57,8 @@ function doBattle(heroicCreature, creature){
     }
     if(heroicCreature.health > 0)
     {
+      console.log("HERO WON!!!!!");
+      displayStats();
       return heroicCreature;
     }
     else
@@ -61,14 +72,40 @@ function doBattle(heroicCreature, creature){
   }
 }
 
-var restImage = document.getElementById('restimage');
-console.log(restImage);
 
 // UI
 
-$(document).ready(function() {
+function askForName()
+{
+  var name = window.prompt("What is your hero's name?");
+  displayStats();
+  return name;
+}
 
+function displayStats()
+{
+  $("#name").html(hero.name);
+  $("#health").html(hero.health);
+  $("#weaponType").html(hero.weapon.type);
+  $("#weaponDamage").html(hero.weapon.damage);
+}
+
+function displayInventory()
+{
+  console.log("Inventory:")
+  console.log(hero.inventory);
+}
+
+function updateStats()
+{
+  displayStats();
+  displayInventory();
+}
+
+
+$(document).ready(function() {
+  hero.name = askForName();
 
 });
 
-restImage.onclick = rest(hero);
+displayStats();
