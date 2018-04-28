@@ -95,12 +95,16 @@ function displayStats()
 
 function displayInventory()
 {
+  var inv = document.getElementById("inventory");
+  while (inv.firstChild)
+  {
+    inv.removeChild(inv.firstChild);
+  }
   hero.inventory.forEach(function(element)
   {
     var spanObj = "<span>" + element.type + "</span>";
     var divObj = document.createElement('div');
     divObj.innerHTML = spanObj;
-    var inv = document.getElementById("inventory");
     inv.appendChild(divObj);
   });
   console.log("Inventory:")
