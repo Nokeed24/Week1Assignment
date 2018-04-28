@@ -95,6 +95,14 @@ function displayStats()
 
 function displayInventory()
 {
+  hero.inventory.forEach(function(element)
+  {
+    var spanObj = "<span>" + element.type + "</span>";
+    var divObj = document.createElement('div');
+    divObj.innerHTML = spanObj;
+    var inv = document.getElementById("inventory");
+    inv.appendChild(divObj);
+  });
   console.log("Inventory:")
   console.log(hero.inventory);
 }
