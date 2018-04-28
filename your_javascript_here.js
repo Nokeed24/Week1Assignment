@@ -29,7 +29,7 @@ function equipWeapon(creature, index){
   creature.inventory.splice(index, 1);
   return creature;
 }
-// UI
+
 function doBattle(heroicCreature, creature){
   if (heroicCreature.heroic === true)
   {
@@ -54,5 +54,6 @@ function doBattle(heroicCreature, creature){
   {
     return null;
   }
-
 }
+
+// UI
