@@ -1,0 +1,73 @@
+.board
+{
+  height: 100vh;
+  width: 100vw;
+}
+
+.col
+{
+  height: 100%;
+}
+
+.iconbox
+{
+  height: 100%;
+  width: 15%;
+  display: inline;
+  position: relative;
+}
+
+.iconbox img
+{
+  display: block;
+  border: 2px solid;
+  border-radius: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.weaponimage
+{
+  border-color: yellow !important;
+}
+
+.backpackimage
+{
+  border-color: green !important;
+}
+
+.restimage
+{
+  border-color: red !important;
+}
+
+.herobox
+{
+  display: inline;
+  position: relative;
+}
+
+.herobox img
+{
+  display: block;
+  border: 20px solid;
+  border-color: blue;
+  border-radius: 50%;
+  margin: 10px 0px;
+}
+
+.creaturebox
+{
+  display: inline;
+  position: relative;
+}
+
+.creaturebox img
+{
+  display: block;
+  border: 20px solid;
+  border-color: red;
+  border-radius: 50%;
+  margin: 10px 0px;
+}
