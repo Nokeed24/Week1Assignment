@@ -5,20 +5,43 @@ var hero = {
   heroic: true,
   inventory: [],
   health: 10,
-  weapon: { type: "Melee", damage: 2}
+  weapon: { type: "melee", damage: 2}
 };
 
 var assaultRifle = {type: "AR", damage: 5};
-var machete = {type: "Melee", damage: 4};
-var magnum = {type: "Pistol", damage: 10};
-var shotgun = {type: "Shotgun", damage: 7};
-var enemy = {health: 10, weapon: {type: "Melee", damage: 1}};
+var machete = {type: "machete", damage: 4};
+var magnum = {type: "magnum", damage: 10};
+var shotgun = {type: "shotgun", damage: 7};
+var enemy = {health: 10, weapon: {type: "melee", damage: 1}};
 var getIndex = function(){
   var a = window.prompt("Index: ");
   return a;
 }
 
 // Game logic
+function resetEnemy()
+{
+  enemy.health = 10;
+}
+
+function deleteItem(item)
+{
+  if(item.type === "AR")
+  {
+    var parent = document.getElementById("weapons2");
+    var child = document.getElementById(item.type);
+    parent.removeChild(child);
+  }
+  else
+  {
+    console.log("---DELETE THIS---");
+    console.log(item);
+    var parent = document.getElementById("weapons");
+    var child = document.getElementById(item.type);
+    parent.removeChild(child);
+  }
+}
+
 function rest(creature) {
   creature.health = 10;
   console.log("Healed! rest is working");
@@ -62,6 +85,7 @@ function doBattle(heroicCreature, creature){
     {
       console.log("HERO WON!!!!!");
       displayStats();
+      resetEnemy();
       return heroicCreature;
     }
     else

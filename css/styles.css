@@ -3,6 +3,13 @@ body {
    margin:0;
    padding:0;
    height:100%;
+   background-color: black;
+   color: white;
+}
+
+h1
+{
+  text-align: center;
 }
 
 .row
@@ -10,6 +17,7 @@ body {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0px;
+
 }
 
 .board
