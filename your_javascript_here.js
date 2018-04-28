@@ -11,26 +11,31 @@ var hero = {
 // Game logic
 function rest(creature) {
   creature.health = 10;
+  console.log("Healed! rest is working");
   return creature;
 }
 
 function pickUpItem(creature, item) {
   creature.inventory.push(item);
+  console.log("pickUpItem Called");
   return creature;
 }
 
 function dealDamage(attacker, defender){
   defender.health -= attacker.weapon.damage;
+  console.log("dealDamage Called");
   return defender;
 }
 
 function equipWeapon(creature, index){
   creature.weapon = creature.inventory[index];
   creature.inventory.splice(index, 1);
+  console.log("equipWeapon Called");
   return creature;
 }
 
 function doBattle(heroicCreature, creature){
+  console.log("doBattle Called");
   if (heroicCreature.heroic === true)
   {
     while(heroicCreature.health > 0 && creature.health > 0)
@@ -56,4 +61,14 @@ function doBattle(heroicCreature, creature){
   }
 }
 
+var restImage = document.getElementById('restimage');
+console.log(restImage);
+
 // UI
+
+$(document).ready(function() {
+
+
+});
+
+restImage.onclick = rest(hero);
