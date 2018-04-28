@@ -11,14 +11,14 @@
     <body>
       <div class="row board">
         <div class="col span-1-of-3 iconbox">
-          <div class="col span-1-of-2  icons-left">
-            <img onclick="pickUpItem(hero, machete);" class="macheteimage" src="images/machete.JPG" alt="bed" height="50" width="50">
-            <img onclick="pickUpItem(hero, magnum);" class="magnumimage" src="images/magnum.jpg" alt="bed" height="50" width="50">
-            <img onclick="pickUpItem(hero, shotgun);" class="shotgunimage" src="images/shotgun.jpg" alt="bed" height="50" width="50">
+          <div class="col span-1-of-2  icons-left" id="weapons">
+            <img onclick="pickUpItem(hero, machete);" id="machete" class="macheteimage" src="images/machete.JPG" alt="bed" height="50" width="50">
+            <img onclick="pickUpItem(hero, magnum);" id="magnum" class="magnumimage" src="images/magnum.jpg" alt="bed" height="50" width="50">
+            <img onclick="pickUpItem(hero, shotgun);" id="shotgun" class="shotgunimage" src="images/shotgun.jpg" alt="bed" height="50" width="50">
           </div>
-          <div class="col span-1-of-2 icons-right">
+          <div class="col span-1-of-2 icons-right" id="weapons">
             <img onclick="rest(hero);" class="restimage" src="images/bed.jpg" alt="bed" height="50" width="50">
-            <img onclick="pickUpItem(hero, assaultRifle);" class="weaponimage" src="images/assaultrifle.jpeg" alt="rifle" height="50" width="50">
+            <img onclick="pickUpItem(hero, assaultRifle);" id="assaultRifle" class="weaponimage" src="images/assaultrifle.jpeg" alt="rifle" height="50" width="50">
             <img onclick="equipWeapon(hero, getIndex());" class="backpackimage" src="images/backpack.jpeg" alt="rifle" height="50" width="50">
           </div>
         </div>

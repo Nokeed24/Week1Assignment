@@ -120,6 +120,7 @@ function updateStats()
 
 $(document).ready(function() {
   hero.name = askForName();
+  displayStats();
 
 });
 
