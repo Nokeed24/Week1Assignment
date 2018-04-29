@@ -9,7 +9,23 @@ body {
 
 h1
 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
   text-align: center;
+  margin: 0px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+h2
+{
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+.col
+{
+  height: 100%;
 }
 
 .row
@@ -22,13 +38,8 @@ h1
 
 .board
 {
-  height: 50vh;
+  height: 250px;
   width: 100vw;
-}
-
-.col
-{
-  height: 100%;
 }
 
 .stats
@@ -38,9 +49,12 @@ h1
 
 footer
 {
+  position: absolute;
+  bottom: 0;
   background-color: #333;
   padding: 50px;
   font-size: 80%;
+  width: 100%;
 }
 
 .iconbox
@@ -57,7 +71,7 @@ footer
   border-radius: 25%;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 25px;
+  /*margin-left: 25px;*/
 }
 
 .icons-left
@@ -70,6 +84,7 @@ footer
 .backpackimage
 {
   border-color: green !important;
+
 }
 
 .restimage
@@ -82,6 +97,7 @@ footer
 {
   display: inline;
   position: relative;
+  text-align: center;
 }
 
 .herobox img
@@ -103,7 +119,19 @@ footer
 {
   display: block;
   border: 20px solid;
+  float: right;
   border-color: red;
   border-radius: 50%;
   margin: 10px 0px;
+}
+
+.col
+{
+  margin: 0px;
+}
+
+form
+{
+  float: right;
+  margin-top: 16px;
 }
