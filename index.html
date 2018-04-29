@@ -7,13 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/grid.css">
         <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Permanent+Marker" rel="stylesheet">
     </head>
     <body>
       <h1>THE CODING DEAD</h1>
       <div class="row board">
         <div class="col span-1-of-3 iconbox">
-          <div class="col span-1-of-2  icons-left" id="weapons">
+          <div class="col span-1-of-2 icons-left" id="weapons">
             <img onclick="pickUpItem(hero, machete);updateStats();deleteItem(machete);" id="machete" class="macheteimage" src="images/machete.JPG" alt="machete" height="50" width="50">
             <img onclick="pickUpItem(hero, magnum);updateStats();deleteItem(magnum);" id="magnum" class="magnumimage" src="images/magnum.jpg" alt="magnum" height="50" width="50">
             <img onclick="pickUpItem(hero, shotgun);updateStats();deleteItem(shotgun);" id="shotgun" class="shotgunimage" src="images/shotgun.jpg" alt="shotgun" height="50" width="50">
@@ -51,13 +51,16 @@
           </ul>
         </div>
         <div class="col span-1-of-3 form">
+          <h2>CHANGE YOUR NAME</h2>
           <form>
             <input type="text" id="new-name" placeholder="Change your name!">
           </form>
         </div>
       </div>
      <footer>
-
+       <div class="row">
+         <p>Codaisseur week 1 assignment - Ouvenis Nikolaos</p>
+       </div>
      </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="your_javascript_here.js"></script>

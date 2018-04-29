@@ -14,7 +14,7 @@ var magnum = {type: "magnum", damage: 10};
 var shotgun = {type: "shotgun", damage: 7};
 var enemy = {health: 10, weapon: {type: "melee", damage: 1}};
 var getIndex = function(){
-  var a = window.prompt("Index: ");
+  var a = window.prompt("Choose a weapon by its index: ");
   return a;
 }
 

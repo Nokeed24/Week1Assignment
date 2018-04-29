@@ -1,10 +1,17 @@
+@-ms-viewport{
+  width: device-width;
+}
+
 html,
 body {
+   width: 100vw;
    margin:0;
    padding:0;
-   height:100%;
+   /*height:100%;*/
    background-color: black;
    color: white;
+   font-family: 'Luckiest Guy', cursive;
+   overflow: hidden;
 }
 
 h1
@@ -45,6 +52,8 @@ h2
 .stats
 {
   list-style: none;
+  text-align: center;
+  padding: 0px;
 }
 
 footer
@@ -52,10 +61,13 @@ footer
   position: absolute;
   bottom: 0;
   background-color: #333;
-  padding: 50px;
+  padding: 50px 0px;
   font-size: 80%;
   width: 100%;
+  text-align: center;
 }
+
+
 
 .iconbox
 {
@@ -84,7 +96,14 @@ footer
 .backpackimage
 {
   border-color: green !important;
+}
 
+.macheteimage,
+.magnumimage,
+.shotgunimage,
+.weaponimage
+{
+  border-color: yellow !important;
 }
 
 .restimage
@@ -102,11 +121,12 @@ footer
 
 .herobox img
 {
+  margin: 0 auto;
   display: block;
   border: 20px solid;
   border-color: blue;
   border-radius: 50%;
-  margin: 10px 0px;
+  /*margin: 10px 0px;*/
 }
 
 .creaturebox
@@ -125,6 +145,11 @@ footer
   margin: 10px 0px;
 }
 
+.inventory h2
+{
+  color: green;
+}
+
 .col
 {
   margin: 0px;
@@ -134,4 +159,9 @@ form
 {
   float: right;
   margin-top: 16px;
+}
+
+.form h2
+{
+  text-align: right;
 }
