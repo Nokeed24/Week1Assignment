@@ -18,6 +18,7 @@ h1
 {
   font-family: 'Permanent Marker', cursive;
   font-size: 60px;
+  color: red;
   text-align: center;
   margin: 0px;
   padding-top: 100px;
@@ -67,6 +68,12 @@ footer
   text-align: center;
 }
 
+li h2
+{
+  color: red;
+  border-bottom: 2px solid;
+}
+
 
 
 .iconbox
@@ -79,7 +86,7 @@ footer
 .iconbox img
 {
   display: block;
-  border: 2px solid;
+  border: 3px solid;
   border-radius: 25%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -104,6 +111,15 @@ footer
 .weaponimage
 {
   border-color: yellow !important;
+}
+
+.macheteimage:hover,
+.magnumimage:hover,
+.shotgunimage:hover,
+.weaponimage:hover
+{
+  border:3px solid;
+  border-color: green !important;
 }
 
 .restimage
@@ -147,7 +163,8 @@ footer
 
 .inventory h2
 {
-  color: green;
+  color: red;
+  border-bottom: 2px solid;
 }
 
 .col
@@ -158,10 +175,12 @@ footer
 form
 {
   float: right;
-  margin-top: 16px;
+  /*margin-top: 16px;*/
 }
 
 .form h2
 {
+  color: red;
   text-align: right;
+  border-bottom: 2px solid;
 }

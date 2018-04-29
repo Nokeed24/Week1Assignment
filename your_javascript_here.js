@@ -5,11 +5,11 @@ var hero = {
   heroic: true,
   inventory: [],
   health: 10,
-  weapon: { type: "melee", damage: 2}
+  weapon: { type: "Fists", damage: 1}
 };
 
-var assaultRifle = {type: "AR", damage: 5};
-var machete = {type: "machete", damage: 4};
+var assaultRifle = {type: "AR", damage: 4};
+var machete = {type: "machete", damage: 3};
 var magnum = {type: "magnum", damage: 10};
 var shotgun = {type: "shotgun", damage: 7};
 var enemy = {health: 10, weapon: {type: "melee", damage: 1}};
