@@ -126,7 +126,10 @@ function displayInventory()
   }
   hero.inventory.forEach(function(element)
   {
-    var spanObj = "<span>" + element.type + "</span>";
+    console.log("---INVENTORY---");
+    console.log(hero.inventory);
+    var invItem = hero.inventory.indexOf(element) + ": " + element.type;
+    var spanObj = "<span>" + invItem + "</span>";
     var divObj = document.createElement('div');
     divObj.innerHTML = spanObj;
     inv.appendChild(divObj);
