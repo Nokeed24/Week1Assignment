@@ -99,7 +99,6 @@ function doBattle(heroicCreature, creature){
   }
 }
 
-
 // UI
 
 function askForName()
@@ -107,6 +106,16 @@ function askForName()
   var name = window.prompt("What is your hero's name?");
   displayStats();
   return name;
+}
+
+function changeHeroName(event)
+{
+  event.preventDefault();
+  var title = $("#new-name").val();
+  //createTodo(title);
+  $("#new-name").val(null);
+  hero.name = title;
+  updateStats();
 }
 
 function displayStats()
@@ -152,3 +161,5 @@ $(document).ready(function() {
 });
 
 displayStats();
+
+$("form").on('submit', changeHeroName);
