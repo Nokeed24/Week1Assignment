@@ -24,6 +24,24 @@ function resetEnemy()
   enemy.health = 10;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function deleteItem(item)
 {
   if(item.type === "AR")
